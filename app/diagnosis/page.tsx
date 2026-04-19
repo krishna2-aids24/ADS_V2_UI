@@ -219,7 +219,7 @@ function SymptomsStep({
     }
 
     try {
-      const res = await fetch("http://127.0.0.1:8000/predict", {
+      const res = await fetch(process.env.NEXT_PUBLIC_API_URL as string, {
         method: "POST",
         body: formData,
       });
